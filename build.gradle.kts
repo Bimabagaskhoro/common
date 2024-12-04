@@ -75,4 +75,7 @@ dependencies {
     androidTestImplementation(libs.uiautomator)
     androidTestImplementation(libs.test.rule)
     androidTestUtil(libs.test.services)
+
+    debugImplementation(libs.chucker)
+    releaseImplementation(libs.chucker.noop)
 }
