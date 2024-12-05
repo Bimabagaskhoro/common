@@ -6,13 +6,11 @@ import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.chuckerteam.chucker.api.RetentionManager
 import okhttp3.OkHttpClient
 import org.koin.core.component.KoinComponent
-import org.koin.core.component.get
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiProvider : KoinComponent {
-    inline fun <reified T> provideApi(baseUrl: String): T {
-        val context: Context = get()
+    inline fun <reified T> provideApi(baseUrl: String, context: Context): T {
         val chuckerCollector =
             ChuckerCollector(context, true, RetentionManager.Period.ONE_HOUR)
 

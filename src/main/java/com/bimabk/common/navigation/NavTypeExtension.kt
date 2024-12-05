@@ -1,4 +1,4 @@
-package com.bimabk.common.extension
+package com.bimabk.common.navigation
 
 import android.os.Build
 import android.os.Bundle
